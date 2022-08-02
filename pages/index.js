@@ -46,7 +46,6 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
   console.log(propertiesForRent, propertiesForSale);
   return (
     <div>
-      <h1>Hello World</h1>
       {/* Rent a home banner */}
       <Banner
         purpose='Rent a Home'
