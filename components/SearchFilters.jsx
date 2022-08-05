@@ -26,7 +26,10 @@ const SearchFilters = () => {
     const values = getFilterValues(filterValues);
 
     values.forEach((item) => {
-      query[item.name] = item.value;
+      // dont want to show all the empty filter options in url
+      if (item.value && filterValues?.[item.name]) {
+        query[item.name] = item.value;
+      }
     });
 
     router.push({ pathname: path, query });
